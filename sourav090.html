@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>enter your address below please .......</h2>
+<textarea id="textarea1" rows="4" cols="50">
+residential address
+</textarea>
+
+<br><br>
+
+<input type="checkbox" id="myCheck" onclick="copyText()">
+<label for="myCheck"> Copy the text</label>
+
+<br><br>
+
+<textarea id="textarea2" rows="4" cols="50">
+current address
+</textarea>
+
+<script>
+function copyText() {
+  var checkBox = document.getElementById("myCheck");
+  var text1 = document.getElementById("textarea1");
+  var text2 = document.getElementById("textarea2");
+  if (checkBox.checked == true){
+    text2.value = text1.value;
+  } else {
+    text2.value = "";
+  }
+}
+</script>
+
+</body>
+</html>
+
+
